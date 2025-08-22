@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ZER0GYM</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="script.js"></script>
+  <style>
+    /* ajustes mínimos, pode manter seu Home.css */
+    .cards-servico, .cards-planos {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .servico, .plano {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      background: #1d1d1d;
+      color: white;
+      width: 250px;
+      text-align: center;
+    }
+    .btn-contratar {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: red;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <nav>
+        <h1>
+          <a href="/">
+            <img class="image" src="logosemfundogimp.png" alt="logo da academia">
+          </a>
+        </h1>
+        <div class="menu">
+          <a href="#servicos">Serviços</a>
+          <a href="#unidades">Unidades</a>
+          <a href="#planos">Planos</a>
+          <a id="areadoaluno" href="/aluno">Area do Aluno</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="banner">
+      <h2>Transforme seu corpo hoje</h2>
+      <p>Treine como uma pantera</p>
+    </section>
+
+    <section id="servicos">
+      <h2>Conheça Nossos Serviços</h2>
+      <div id="caixa-lorem">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, adipisci nisi consequatur accusamus nemo excepturi voluptate quisquam? Perferendis amet repellendus modi dignissimos numquam, laudantium excepturi, laboriosam nisi, consequuntur sequi dicta?</p>
+      </div>
+      <div class="cards-servico">
+        <div class="servico">
+          <h3>Musculação</h3>
+          <p>Máquinas e equipamentos de alto nível para sua melhor performance</p>
+        </div>
+        <div class="servico">
+          <h3>Funcional</h3>
+          <p>Treinamento de alta intensidade para fazer seu corpo performar em alto nível</p>
+        </div>
+        <div class="servico">
+          <h3>Cardio</h3>
+          <p>Máquinas com a melhor qualidade para você fazer seu cardio com total segurança</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="banner2">
+      <p>Nenhum cidadão tem o direito de ser um amador em matéria de treinamento físico...</p>
+      <a><img src="socrates.png" alt="socrates"><span>Socrates</span></a>
+    </section>
+
+    <section id="unidades" style="padding:30px;background-color:#1a1a1a">
+  <h2 style="text-align:center;margin-bottom:30px;font-size:40px">Nossas Unidades</h2>
+  <div class="lista-unidades" style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+    <!-- Unidades serão inseridas aqui pelo JS -->
+  </div>
+</section>
+
+
+    <section id="planos">
+      <h2 style="font-size:40px">Nossos Planos</h2>
+      <div class="cards-planos">
+        <div class="plano">
+          <h3>Mensal</h3>
+          <p>R$ 89,90</p>
+          <ul>
+            <li>Acesso livre à musculação</li>
+            <li>Treino personalizado</li>
+            <li>Sem fidelidade</li>
+          </ul>
+          <button class="btn-contratar" onclick="contratarPlano('Mensal')">Contratar</button>
+        </div>
+
+        <div class="plano">
+          <h3>Trimestral</h3>
+          <p>R$ 249,90</p>
+          <ul>
+            <li>Todos os benefícios do plano mensal</li>
+            <li>+ Avaliação física grátis</li>
+          </ul>
+          <button class="btn-contratar" onclick="contratarPlano('Trimestral')">Contratar</button>
+        </div>
+
+        <div class="plano">
+          <h3>Semestral</h3>
+          <p>R$ 449,90</p>
+          <ul>
+            <li>Todos os benefícios anteriores</li>
+            <li>Leve até 3 amigos para treinar com você</li>
+          </ul>
+          <button class="btn-contratar" onclick="contratarPlano('Semestral')">Contratar</button>
+        </div>
+
+        <div class="plano">
+          <h3>Anual</h3>
+          <p>R$ 799,90</p>
+          <ul>
+            <li>Todos os benefícios anteriores</li>
+            <li>+ Camiseta exclusiva da academia</li>
+          </ul>
+          <button class="btn-contratar" onclick="contratarPlano('Anual')">Contratar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Academia zer0 GYM – &copy; Todos os direitos reservados</p>
+      <ul>
+        <a href="https://instagram.com/zer0.gym" target="_blank">
+          <img src="Instagram_icon.png" alt="Instagram" style="width:24px;height:24px;margin-right:8px"> @zer0.gym
+        </a>
+        <a href="https://wa.me/5565992916556" target="_blank">
+          <img src="whatsapp.png" alt="whatsapp" style="width:24px;height:24px;margin-right:8px"> (65)99291-6556
+        </a>
+      </ul>
+      <a href="/sobre">Sobre</a>
+    </footer>
+  </main>
+
+  <script>
+    function contratarPlano(nomePlano) {
+      console.log("Plano selecionado:", nomePlano);
+      localStorage.setItem('planoSelecionado', nomePlano);
+      window.location.href = "/login";
+    }
+  </script>
+</body>
+</html>
