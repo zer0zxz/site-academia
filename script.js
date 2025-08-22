@@ -37,13 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const link = document.createElement("a");
       link.href = u.maps;
       link.target = "_blank";
-      link.style.textDecoration = "none";
-      link.style.color = "inherit";
-      link.style.width = "300px";
 
       link.innerHTML = `
-        <div style="border:1px solid red;border-radius:10px;padding:15px;background:#1d1d1d;text-align:center;transition:transform 0.2s;">
-          <img src="${u.imagem}" alt="${u.nome}" style="width:100%;border-radius:8px" />
+        <div class="card">
+          <img src="${u.imagem}" alt="${u.nome}" />
           <h3>${u.nome}</h3>
           <p>${u.endereco}</p>
         </div>
@@ -61,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
