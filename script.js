@@ -4,7 +4,6 @@
 function contratarPlano(nomePlano) {
   console.log("Plano selecionado:", nomePlano);
   localStorage.setItem('planoSelecionado', nomePlano);
-  window.location.href = "/login"; // redireciona para login
 }
 
 // --- Exemplo: gerar unidades dinamicamente, parecido com o .map do React ---

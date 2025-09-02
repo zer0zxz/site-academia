@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Sansation", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    text-align: center;
+    padding: 30px;
+}
+body,html{
+    background-color: #1a1a1a;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    height: 100vh;
+    position: relative;
+}
+.login{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    background-color: #222222;
+    border-radius: 25px;
+}
+.login p{
+    padding: 10px;
+}
+.login #loginbtm{
+    padding: 10px;
+    width: 125px;
+    height: 40px;
+    background-color: red;
+}
+.logo {
+    display: none;
+}
+
+
+@media screen and (min-width: 900px){
+header{
+    display:none
+}
+.login{
+    height: 350px;
+    width: 600px;
+    background-color: #222222;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo{
+    display: block;
+    width: 50%;
+}
+}
