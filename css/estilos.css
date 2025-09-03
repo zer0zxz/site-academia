@@ -1,4 +1,6 @@
-body{
+@charset "UTF-8";
+
+*{
   margin:0px;
   font-family: Arial, Helvetica, sans-serif;
 }
